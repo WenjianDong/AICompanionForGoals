@@ -14,9 +14,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # OpenAI API call
         openai.api_key = os.environ["OPENAI_API_KEY"]
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are an uplifting and motivational assistant."},
+                {"role": "system", "content": "You are an uplifting and motivational AI companion."},
                 {"role": "user", "content": prompt}
             ]
         )
