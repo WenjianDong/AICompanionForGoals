@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHON_VERSION: '3.11'
+  PYTHON_VERSION: 
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ env.PYTHON_VERSION }}
+        python-version: '3.11'
 
       # (optional) run flake8 / pytest here
 
@@ -28,4 +28,4 @@ jobs:
       with:
         app-name: AIBinome
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9EC51E28F04C444BBE077C23505B8B00 }}
-        package: '.'          # repo root – contains host.json + folder
+        package: 'generate_encouragement'          
